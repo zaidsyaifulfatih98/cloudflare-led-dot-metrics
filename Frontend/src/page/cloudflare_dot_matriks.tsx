@@ -1,6 +1,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+const BASE_URL = import.meta.env.VITE_SERVER_URL ?? ''
+
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
 export default function CloudflareDotMatriks() {
@@ -12,7 +14,7 @@ export default function CloudflareDotMatriks() {
   const inputRef              = useRef<HTMLInputElement>(null)
 
   function fetchStatus() {
-    fetch('/api/cloudflare-led/status')
+    fetch(`${BASE_URL}/api/cloudflare-led/status`)
       .then((r) => r.json())
       .then((d) => {
         setOnline(d.online ?? false)
@@ -32,7 +34,7 @@ export default function CloudflareDotMatriks() {
     setStatus('loading')
     setMessage('')
     try {
-      const res = await fetch('/api/cloudflare-led', {
+      const res = await fetch(`${BASE_URL}/api/cloudflare-led`, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ text: text.trim() }),
