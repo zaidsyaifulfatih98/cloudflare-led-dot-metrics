@@ -13,7 +13,7 @@ const app         = express();
 const PORT_SERVER = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGIN || '*',
+  origin: (process.env.ALLOWED_ORIGIN || '*').replace(/\/$/, ''),
 }));
 app.use(express.json());
 
