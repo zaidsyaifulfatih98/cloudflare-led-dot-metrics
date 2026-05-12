@@ -2,28 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AdminPage from './page/Admin'
-import BlogPage from './page/Blogs'
-import LoginPage from './page/Login'
-import RegisterPage from './page/Register'
+import CloudflareDotMatriks from './page/cloudflare_dot_matriks'
 
 const router = createBrowserRouter([
-  {
-    path: '/admin',
-    Component: AdminPage
-  },
-  {
-    path: '/post',
-    Component: BlogPage
-  },
-  {
-    path: '/register',
-    Component: RegisterPage
-  },
+  
   {
     path: '/',
-    Component: LoginPage
+    Component: CloudflareDotMatriks,
   },
+  
+
+  
 ])
 
 createRoot(document.getElementById('root')!).render(

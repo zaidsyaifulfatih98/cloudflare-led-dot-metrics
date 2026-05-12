@@ -1,0 +1,11 @@
+name             = "cloudflare-dot-matriks"
+main             = "worker.js"
+compatibility_date = "2024-09-23"
+
+# KV namespace untuk menyimpan teks yang ditampilkan di LED
+# Langkah:
+#   1. Jalankan: wrangler kv:namespace create "MESSAGES"
+#   2. Salin id yang dikembalikan dan isi di bawah ini
+[[kv_namespaces]]
+binding = "MESSAGES"
+id      = "d9ab885016f3426a8387a8d8af5bdb92"

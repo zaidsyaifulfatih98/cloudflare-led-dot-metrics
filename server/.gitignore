@@ -1,0 +1,19 @@
+# Dependency (ukurannya besar, tidak perlu di-upload)
+node_modules/
+
+# Environment Variables (berisi password/API key rahasia)
+.env
+.env.local
+
+# Hasil build/produksi
+dist/
+build/
+.next/
+
+# Log file
+npm-debug.log*
+yarn-error.log*
+
+# File sistem operasi
+.DS_Store
+Thumbs.db

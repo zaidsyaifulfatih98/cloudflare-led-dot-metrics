@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact",
+    "*.prisma": "prisma"
+  },
+  "C_Cpp.default.compilerPath": "d:\\Arduino Uno\\File_Arduino\\cloudflare_dot_matriks.ino",
+  "arduino.path": "C:\\Users\\zaids\\AppData\\Local\\Programs\\Arduino IDE\\resources\\app\\lib\\backend\\resources",
+  "arduino.useArduinoCli": true
+}
